@@ -1,0 +1,54 @@
+
+
+Multiple vBox'es in a single stack Pane will place on top of eachother
+
+----------------
+GOOD: 
+----------------
+        VBox noteDurationDecayGapBox = new VBox(
+            this.noteDurationLabel, 
+            this.noteDurationSlider,
+            this.noteDecayLabel, 
+            this.noteDecaySlider,
+            this.noteGapLabel, 
+            this.noteGapSlider
+
+        );
+
+        StackPane noteTimesPane = new StackPane(
+            noteDurationDecayGapBox,
+            this.noteTimingCanvas
+
+        );
+
+
+--------------------------
+SHIT
+--------------------------
+
+        VBox noteDurationBox = new VBox(
+            this.noteDurationLabel, 
+            this.noteDurationSlider,
+
+        );
+
+        VBox noteDecayBox = new VBox(
+            this.noteDecayLabel, 
+            this.noteDecaySlider,
+
+        );
+
+        VBox noteGapBox = new VBox(
+            this.noteGapLabel, 
+            this.noteGapSlider
+
+        );
+
+
+        StackPane noteTimesPane = new StackPane(
+	    noteDurationBox
+	    noteDecayBox
+	    noteDelayBox
+            this.noteTimingCanvas	
+        );
+
